@@ -3,7 +3,7 @@
 A curated list of funding opportunities for graduate studies in Machine Learning and AI (Master's and PhD programs). This list is not exhaustive, you can visit websites like [jobs.ac.uk](https://www.jobs.ac.uk/phd) and [findaphd.com](https://www.findaphd.com/) to find more opportunities. All the best!
 
 ## Deadlines from November 2025
-| S/N | Institution                                                                 | Location    | Research Area                                                                                           | Type | Deadline         | Application Link |
+| S/N | Institution                                                                 | Institution Location    | Research Area                                                                                           | Type | Deadline         | Application Link |
 |-----|------------------------------------------------------------------------------|-------------|----------------------------------------------------------------------------------------------------------|------|------------------|------------------|
 | 1 |	Mohamed bin Zayed University of Artificial Intelligence (MBZUAI) |	UAE |	AI / Machine Learning / CV / NLP / Robotics |	MSc & PhD |	15 Jan 2026 |	[Link](https://scholarsavenue.com/mbzuai-scholarship-uae/) | 
 | 2 |	Munich Center for Machine Learning (MCML) |	UK |	Fundamentals of AI |	MSc & PhD |	14 Nov 2025 |	[Link](https://mcml.ai/opportunities/for-phd-applicants/phd2026/) | 
@@ -14,7 +14,7 @@ A curated list of funding opportunities for graduate studies in Machine Learning
 | 7 |	EIT (European Institute of Innovation & Technology) Graduate Scholarships @ University of Oxford |	UK |	AI / Robotics |	PhD |	1 Dec 2025 |	[Link](https://www.eit.org/scholars/graduate) | 
 | 8 |	University of Cambridge – PhD Programme in Advanced Machine Learning |	UK |	Machine Learning |	PhD |	2 Dec 2025 |	[Link](https://mlg.eng.cam.ac.uk/phd_programme_in_advanced_machine_learning.html) | 
 | 9 |	University of Warwick – Foundations of AI & ML CDT |	UK |	Foundations of AI & ML |	PhD |	14 Nov 2025 |	[Link](https://warwick.ac.uk/fac/sci/dcs/research/fam/phdapps/) | 
-| 10 |	Future of Life Institute – Technical PhD Fellowships |	International |	AI / Existential Risk |	PhD |	21 Nov 2025 |	[Link](https://futureoflife.org/grant-program/phd-fellowships/) | 
+| 10 |	Future of Life Institute – Technical PhD Fellowships |	UK |	AI / Existential Risk |	PhD |	21 Nov 2025 |	[Link](https://futureoflife.org/grant-program/phd-fellowships/) | 
 
 
 ## Deadlines from October 2025
