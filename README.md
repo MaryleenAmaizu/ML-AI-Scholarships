@@ -20,7 +20,7 @@ A curated list of funding opportunities for graduate studies in Machine Learning
 | 13	| Loughborough University |	UK |	AI & Deep Learning for Tree and Plant Health Monitoring, Biosecurity & Biodiversity |	PhD	| 7th Jan. 2026	| [Link](https://www.jobs.ac.uk/job/DPE102/phd-studentship-ai-and-deep-learning-for-tree-and-plant-health-monitoring-advancing-biosecurity-and-biodiversity?)|
 | 14 |	University of Manchester |	UK |	Application of ML to Transformer Design Optimization |	PhD |	28 Nov 2025 |	[Link](https://www.jobs.ac.uk/job/DPC004/application-of-machine-learning-to-transformer-design-optimization?) | 
 | 15 |	University of Edinburgh |	UK |	Embodied, Situated & Grounded Intelligence (AI)|	PhD |	31st Jan. 2026 |	[Link](https://www.findaphd.com/phds/project/phd-studentship-in-multimodal-generative-ai-for-embodied-collaborative-agents/?p187989) | 
-| 16 |	University College London (UCL) |	UK |	Artificial Intelligence (Multiple Topics)|	PhD |	31st Jan. 2026 |	[Link](https://www.findaphd.com/phds/project/phd-studentship-in-multimodal-generative-ai-for-embodied-collaborative-agents/?p187989) | 
+| 16 |	University College London (UCL) |	UK |	Artificial Intelligence (Multiple Topics)|	PhD |	5th Jan. 2026 |	[Link](https://www.findaphd.com/phds/project/g-research-ucl-phd-scholarship-ai-systems-electronic-and-electrical-engineering/?p191241) | 
 
 
 ## Deadlines from October 2025
