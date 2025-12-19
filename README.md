@@ -2,7 +2,7 @@
 
 A curated list of funding opportunities for graduate studies in Machine Learning and AI (Master's and PhD programs). This list is not exhaustive, you can visit websites like [jobs.ac.uk](https://www.jobs.ac.uk/phd) and [findaphd.com](https://www.findaphd.com/) to find more opportunities. All the best!
 
-## Deadlines from November 2025
+
 | S/N | Institution                                                                 | Institution Location    | Research Area                                                                                           | Type | Deadline         | Application Link |
 |-----|------------------------------------------------------------------------------|-------------|----------------------------------------------------------------------------------------------------------|------|------------------|------------------|
 | 1 |	Mohamed bin Zayed University of Artificial Intelligence (MBZUAI) |	UAE |	AI / Machine Learning / CV / NLP / Robotics |	MSc & PhD |	15 Jan 2026 |	[Link](https://scholarsavenue.com/mbzuai-scholarship-uae/) | 
