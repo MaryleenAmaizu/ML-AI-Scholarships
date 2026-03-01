@@ -12,7 +12,7 @@ If you're looking to attend a summer school in Machine Learning or AI, I’ve pu
 | 6 | Probabilistic AI School | Vilnius, Lithuania | TBD | 3–7 August 2026 | TBD | https://probai.school/ |
 | 7 | University of Jyväskylä Summer School | Jyväskylä, Finland | 30 April 2026 | 3–14 August 2026 | No | https://www.jyu.fi/en/study-with-us/summer-and-winter-schools/jyvaskyla-summer-school |
 | 8 | International Computer Vision Summer School (ICVSS) | Sicily, Italy | 1 April 2026 | 5–11 July 2026 | Yes | https://icvss.dmi.unict.it/icvss2026/PreviousEditions |
-| 9 | Cooperative AI Summer School | London, United Kingdom | TBD | TBD (2026 not announced) | Yes | https://lnkd.in/eQiVgyjW |
+| 9 | Data Science Africa (DSA) 2026 Summer School | Kampala, Uganda | 15 March 2026 | 20-24 July 2026) | Yes | [https://datascienceafrica.org |](https://datascienceafrica.org/dsa-summer-schools/summer-school-2026) |
 | 10 | Eastern European Machine Learning Summer School (EEML) | Cetinje, Montenegro | 31 March 2026 | 27 July–1 August 2026 | Yes | https://www.eeml.eu/ |
 | 11 | Deep Learning Indaba | Nigeria | TBD | TBD | Yes | https://deeplearningindaba.com/2026/ |
 | 12 | Mathematics Summer School (Gatsby Bridging Programme) | London, United Kingdom | 16 February 2026 | 22 June–7 August 2026 | Yes | https://www.ucl.ac.uk/life-sciences/gatsby/study-and-work/gatsby-bridging-programme |
