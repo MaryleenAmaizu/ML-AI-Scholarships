@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ML/AI Scholarships & Summer Schools</title>
+  <style>
+    :root {
+      --bg: #0f1117;
+      --surface: #1a1d27;
+      --surface2: #22263a;
+      --border: #2e3250;
+      --accent: #7c6af5;
+      --accent2: #5de0c5;
+      --text: #e8eaf0;
+      --muted: #8890a8;
+      --green: #4caf7d;
+      --orange: #f5a623;
+      --red: #e05c5c;
+      --tag-bg: #2a2f4a;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: var(--bg); color: var(--text); font-family: 'Segoe UI', system-ui, sans-serif; font-size: 14px; }
+
+    header {
+      background: linear-gradient(135deg, #1a1d27 0%, #12142a 100%);
+      border-bottom: 1px solid var(--border);
+      padding: 24px 32px 20px;
+    }
+    header h1 { font-size: 22px; font-weight: 700; color: var(--text); }
+    header h1 span { color: var(--accent); }
+    header p { color: var(--muted); margin-top: 6px; font-size: 13px; }
+    .header-meta { display: flex; gap: 16px; margin-top: 10px; flex-wrap: wrap; }
+    .header-meta a { color: var(--accent2); font-size: 12px; text-decoration: none; }
+    .header-meta a:hover { text-decoration: underline; }
+
+    nav {
+      display: flex;
+      gap: 4px;
+      padding: 12px 32px;
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+    }
+    .tab-btn {
+      padding: 6px 18px;
+      border: 1px solid var(--border);
+      background: transparent;
+      color: var(--muted);
+      cursor: pointer;
+      border-radius: 6px;
+      font-size: 13px;
+      transition: all .15s;
+    }
+    .tab-btn.active { background: var(--accent); color: #fff; border-color: var(--accent); }
+    .tab-btn:hover:not(.active) { border-color: var(--accent); color: var(--text); }
+
+    .controls {
+      padding: 14px 32px;
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+    .search-wrap { position: relative; flex: 1; min-width: 200px; max-width: 380px; }
+    .search-wrap input {
+      width: 100%; padding: 7px 12px 7px 34px;
+      background: var(--surface2); border: 1px solid var(--border);
+      border-radius: 6px; color: var(--text); font-size: 13px; outline: none;
+    }
+    .search-wrap input:focus { border-color: var(--accent); }
+    .search-wrap svg { position: absolute; left: 10px; top: 50%; transform: translateY(-50%); opacity: .4; }
+    select {
+      padding: 7px 10px; background: var(--surface2); border: 1px solid var(--border);
+      border-radius: 6px; color: var(--text); font-size: 13px; outline: none; cursor: pointer;
+    }
+    select:focus { border-color: var(--accent); }
+    .count-badge {
+      margin-left: auto; background: var(--surface2); border: 1px solid var(--border);
+      border-radius: 20px; padding: 4px 12px; font-size: 12px; color: var(--muted);
+    }
+
+    main { padding: 24px 32px; }
+
+    .tab-panel { display: none; }
+    .tab-panel.active { display: block; }
+
+    table { width: 100%; border-collapse: collapse; }
+    thead th {
+      text-align: left; padding: 10px 12px; font-size: 11px; font-weight: 600;
+      text-transform: uppercase; letter-spacing: .05em;
+      color: var(--muted); border-bottom: 1px solid var(--border);
+      background: var(--surface);
+      cursor: pointer; user-select: none; white-space: nowrap;
+    }
+    thead th:hover { color: var(--text); }
+    thead th .sort-arrow { margin-left: 4px; opacity: .4; }
+    thead th.sorted .sort-arrow { opacity: 1; color: var(--accent); }
+
+    tbody tr {
+      border-bottom: 1px solid var(--border);
+      transition: background .1s;
+    }
+    tbody tr:hover { background: var(--surface2); }
+    td { padding: 11px 12px; vertical-align: middle; }
+
+    .institution { font-weight: 600; color: var(--text); }
+    .research { color: var(--muted); font-size: 12px; margin-top: 2px; }
+    .location-flag { display: flex; align-items: center; gap: 5px; }
+
+    .badge {
+      display: inline-block; padding: 2px 8px; border-radius: 4px;
+      font-size: 11px; font-weight: 600; white-space: nowrap;
+    }
+    .badge-phd { background: #2a3a5c; color: #7db3f5; }
+    .badge-msc { background: #3a2a5c; color: #c17df5; }
+    .badge-both { background: #1a3a3a; color: var(--accent2); }
+
+    .deadline-cell { white-space: nowrap; }
+    .deadline-past { color: var(--red); }
+    .deadline-soon { color: var(--orange); }
+    .deadline-ok { color: var(--green); }
+    .deadline-open { color: var(--accent2); }
+    .deadline-tbd { color: var(--muted); }
+
+    .funded-yes { color: var(--green); }
+    .funded-no { color: var(--red); }
+    .funded-partial { color: var(--orange); }
+    .funded-tbd { color: var(--muted); }
+
+    .link-btn {
+      display: inline-block; padding: 4px 12px; border: 1px solid var(--border);
+      border-radius: 5px; color: var(--accent); text-decoration: none;
+      font-size: 12px; transition: all .15s;
+    }
+    .link-btn:hover { background: var(--accent); color: #fff; border-color: var(--accent); }
+
+    .no-results {
+      text-align: center; padding: 60px 20px; color: var(--muted);
+    }
+
+    .section-label {
+      display: inline-block; padding: 1px 7px; border-radius: 3px;
+      font-size: 10px; background: var(--tag-bg); color: var(--muted);
+      margin-left: 6px; vertical-align: middle;
+    }
+
+    .updated-at {
+      font-size: 11px; color: var(--muted); margin-top: 16px; text-align: right;
+    }
+
+    @media (max-width: 700px) {
+      header, nav, .controls, main { padding-left: 16px; padding-right: 16px; }
+      td:nth-child(3), th:nth-child(3),
+      td:nth-child(5), th:nth-child(5) { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>ML/AI <span>Scholarships</span> & Summer Schools</h1>
+  <p>Curated opportunities for graduate studies and summer programs in Machine Learning and Artificial Intelligence.</p>
+  <div class="header-meta">
+    <a href="https://github.com/MaryleenAmaizu/ML-AI-Scholarships" target="_blank">⭐ GitHub</a>
+    <a href="https://www.jobs.ac.uk/phd" target="_blank">jobs.ac.uk/phd</a>
+    <a href="https://www.findaphd.com/" target="_blank">findaphd.com</a>
+    <a href="https://awesome-mlss.com/" target="_blank">awesome-mlss.com</a>
+  </div>
+</header>
+
+<nav>
+  <button class="tab-btn active" onclick="switchTab('scholarships')">PhD &amp; MSc Opportunities</button>
+  <button class="tab-btn" onclick="switchTab('summer')">Summer Schools</button>
+</nav>
+
+<div class="controls">
+  <div class="search-wrap">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
+    </svg>
+    <input type="text" id="searchInput" placeholder="Search institution, area, location…" oninput="applyFilters()">
+  </div>
+  <select id="typeFilter" onchange="applyFilters()">
+    <option value="">All types</option>
+    <option value="PhD">PhD</option>
+    <option value="MSc">MSc</option>
+    <option value="Both">MSc &amp; PhD</option>
+  </select>
+  <select id="locationFilter" onchange="applyFilters()">
+    <option value="">All locations</option>
+  </select>
+  <select id="deadlineFilter" onchange="applyFilters()">
+    <option value="">All deadlines</option>
+    <option value="upcoming">Upcoming only</option>
+    <option value="open">Open till filled</option>
+  </select>
+  <select id="fundedFilter" style="display:none" onchange="applyFilters()">
+    <option value="">All funding</option>
+    <option value="true">Funded</option>
+    <option value="false">Not funded</option>
+  </select>
+  <span class="count-badge" id="countBadge">— results</span>
+</div>
+
+<main>
+  <!-- SCHOLARSHIPS TAB -->
+  <div id="tab-scholarships" class="tab-panel active">
+    <table>
+      <thead>
+        <tr>
+          <th onclick="sortTable('scholarships','institution')">Institution <span class="sort-arrow">↕</span></th>
+          <th onclick="sortTable('scholarships','location')">Location <span class="sort-arrow">↕</span></th>
+          <th>Research Area</th>
+          <th onclick="sortTable('scholarships','type')">Type <span class="sort-arrow">↕</span></th>
+          <th onclick="sortTable('scholarships','deadline')" class="sorted">Deadline <span class="sort-arrow">↑</span></th>
+          <th>Link</th>
+        </tr>
+      </thead>
+      <tbody id="scholarshipsBody"></tbody>
+    </table>
+    <div id="scholarshipsEmpty" class="no-results" style="display:none">No results match your filters.</div>
+  </div>
+
+  <!-- SUMMER SCHOOLS TAB -->
+  <div id="tab-summer" class="tab-panel">
+    <table>
+      <thead>
+        <tr>
+          <th onclick="sortTable('summer','name')">Program <span class="sort-arrow">↕</span></th>
+          <th onclick="sortTable('summer','location')">Location <span class="sort-arrow">↕</span></th>
+          <th onclick="sortTable('summer','deadline')" class="sorted">Deadline <span class="sort-arrow">↑</span></th>
+          <th>Dates</th>
+          <th onclick="sortTable('summer','funded')">Funded <span class="sort-arrow">↕</span></th>
+          <th>Link</th>
+        </tr>
+      </thead>
+      <tbody id="summerBody"></tbody>
+    </table>
+    <div id="summerEmpty" class="no-results" style="display:none">No results match your filters.</div>
+  </div>
+
+  <div class="updated-at" id="updatedAt"></div>
+</main>
+
+<script>
+let scholarships = [];
+let summerSchools = [];
+let currentTab = 'scholarships';
+let sortState = { scholarships: { col: 'deadline', asc: true }, summer: { col: 'deadline', asc: true } };
+
+const today = new Date();
+today.setHours(0,0,0,0);
+
+async function loadData() {
+  const [s, ss] = await Promise.all([
+    fetch('data/scholarships.json').then(r => r.json()),
+    fetch('data/summer_schools.json').then(r => r.json())
+  ]);
+  scholarships = s;
+  summerSchools = ss;
+  populateLocationFilter();
+  applyFilters();
+  document.getElementById('updatedAt').textContent = 'Data last updated: ' + new Date().toLocaleDateString('en-GB', {day:'numeric',month:'long',year:'numeric'});
+}
+
+function populateLocationFilter() {
+  const data = currentTab === 'scholarships' ? scholarships : summerSchools;
+  const key = currentTab === 'scholarships' ? 'location' : 'location';
+  const locs = [...new Set(data.map(d => d[key]).filter(Boolean))].sort();
+  const sel = document.getElementById('locationFilter');
+  const cur = sel.value;
+  sel.innerHTML = '<option value="">All locations</option>' + locs.map(l => `<option value="${l}">${l}</option>`).join('');
+  sel.value = cur;
+}
+
+function switchTab(tab) {
+  currentTab = tab;
+  document.querySelectorAll('.tab-btn').forEach((b,i) => b.classList.toggle('active', (i===0&&tab==='scholarships')||(i===1&&tab==='summer')));
+  document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+  document.getElementById('tab-'+tab).classList.add('active');
+  document.getElementById('fundedFilter').style.display = tab === 'summer' ? '' : 'none';
+  document.getElementById('typeFilter').style.display = tab === 'scholarships' ? '' : 'none';
+  populateLocationFilter();
+  applyFilters();
+}
+
+function deadlineClass(iso) {
+  if (iso === '9999-12-31') return { cls: 'deadline-open', label: null };
+  const d = new Date(iso);
+  const diff = Math.ceil((d - today) / 86400000);
+  if (diff < 0) return { cls: 'deadline-past', label: null };
+  if (diff <= 14) return { cls: 'deadline-soon', label: `(${diff}d left)` };
+  return { cls: 'deadline-ok', label: null };
+}
+
+function renderScholarships(data) {
+  const tbody = document.getElementById('scholarshipsBody');
+  if (!data.length) { tbody.innerHTML=''; document.getElementById('scholarshipsEmpty').style.display=''; return; }
+  document.getElementById('scholarshipsEmpty').style.display='none';
+  tbody.innerHTML = data.map(r => {
+    const dl = deadlineClass(r.deadline);
+    const label = dl.label ? ` <small>${dl.label}</small>` : '';
+    const typeBadge = r.type.includes('&') || r.type.toLowerCase().includes('both')
+      ? `<span class="badge badge-both">${r.type}</span>`
+      : r.type.startsWith('MSc') ? `<span class="badge badge-msc">${r.type}</span>`
+      : `<span class="badge badge-phd">${r.type}</span>`;
+    return `<tr>
+      <td><div class="institution">${r.institution}</div><div class="research">${r.research_area}</div></td>
+      <td>${r.location}</td>
+      <td style="max-width:260px;font-size:12px;color:var(--muted)">${r.research_area}</td>
+      <td>${typeBadge}</td>
+      <td class="deadline-cell"><span class="${dl.cls}">${r.deadline_display}${label}</span></td>
+      <td><a class="link-btn" href="${r.link}" target="_blank" rel="noopener">Apply →</a></td>
+    </tr>`;
+  }).join('');
+}
+
+function renderSummer(data) {
+  const tbody = document.getElementById('summerBody');
+  if (!data.length) { tbody.innerHTML=''; document.getElementById('summerEmpty').style.display=''; return; }
+  document.getElementById('summerEmpty').style.display='none';
+  tbody.innerHTML = data.map(r => {
+    const dl = deadlineClass(r.deadline);
+    const label = dl.label ? ` <small>${dl.label}</small>` : '';
+    const fundedHtml = r.funded === true
+      ? `<span class="funded-yes">✓ Yes</span>`
+      : r.funded === false ? `<span class="funded-no">✗ No</span>`
+      : `<span class="funded-tbd">TBD</span>`;
+    return `<tr>
+      <td><div class="institution">${r.name}</div>${r.notes ? `<div class="research">${r.notes}</div>` : ''}</td>
+      <td>${r.location}</td>
+      <td class="deadline-cell"><span class="${dl.cls}">${r.deadline_display}${label}</span></td>
+      <td style="color:var(--muted);font-size:12px">${r.dates}</td>
+      <td>${fundedHtml}</td>
+      <td><a class="link-btn" href="${r.link}" target="_blank" rel="noopener">Info →</a></td>
+    </tr>`;
+  }).join('');
+}
+
+function applyFilters() {
+  const q = document.getElementById('searchInput').value.toLowerCase();
+  const locVal = document.getElementById('locationFilter').value;
+  const deadlineVal = document.getElementById('deadlineFilter').value;
+
+  if (currentTab === 'scholarships') {
+    const typeVal = document.getElementById('typeFilter').value;
+    let filtered = scholarships.filter(r => {
+      if (q && !`${r.institution} ${r.location} ${r.research_area}`.toLowerCase().includes(q)) return false;
+      if (typeVal === 'PhD' && !r.type.includes('PhD')) return false;
+      if (typeVal === 'MSc' && !r.type.includes('MSc')) return false;
+      if (typeVal === 'Both' && !(r.type.includes('MSc') && r.type.includes('PhD'))) return false;
+      if (locVal && r.location !== locVal) return false;
+      if (deadlineVal === 'upcoming' && new Date(r.deadline) < today) return false;
+      if (deadlineVal === 'open' && r.deadline !== '9999-12-31') return false;
+      return true;
+    });
+    filtered = sortData(filtered, sortState.scholarships);
+    renderScholarships(filtered);
+    document.getElementById('countBadge').textContent = `${filtered.length} result${filtered.length!==1?'s':''}`;
+  } else {
+    const fundedVal = document.getElementById('fundedFilter').value;
+    let filtered = summerSchools.filter(r => {
+      if (q && !`${r.name} ${r.location}`.toLowerCase().includes(q)) return false;
+      if (locVal && r.location !== locVal) return false;
+      if (deadlineVal === 'upcoming' && new Date(r.deadline) < today) return false;
+      if (deadlineVal === 'open' && r.deadline !== '9999-12-31') return false;
+      if (fundedVal === 'true' && r.funded !== true) return false;
+      if (fundedVal === 'false' && r.funded !== false) return false;
+      return true;
+    });
+    filtered = sortData(filtered, sortState.summer);
+    renderSummer(filtered);
+    document.getElementById('countBadge').textContent = `${filtered.length} result${filtered.length!==1?'s':''}`;
+  }
+}
+
+function sortData(data, state) {
+  return [...data].sort((a, b) => {
+    let va = a[state.col] ?? '', vb = b[state.col] ?? '';
+    if (state.col === 'deadline') { va = va || '9999-12-31'; vb = vb || '9999-12-31'; }
+    if (va < vb) return state.asc ? -1 : 1;
+    if (va > vb) return state.asc ? 1 : -1;
+    return 0;
+  });
+}
+
+function sortTable(tab, col) {
+  const s = sortState[tab];
+  s.asc = s.col === col ? !s.asc : true;
+  s.col = col;
+  applyFilters();
+}
+
+loadData();
+</script>
+</body>
+</html>

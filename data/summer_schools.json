@@ -1,0 +1,254 @@
+[
+  {
+    "id": 1,
+    "name": "European Summer School on Artificial Intelligence (ESSAI)",
+    "location": "Vienna, Austria",
+    "deadline": "2026-04-30",
+    "deadline_display": "30 Apr 2026",
+    "dates": "6–10 Jul 2026",
+    "funded": false,
+    "link": "https://essai2026.eu/"
+  },
+  {
+    "id": 2,
+    "name": "International Artificial Intelligence Summer School (IAISS) 2026",
+    "location": "Italy",
+    "deadline": "2026-04-23",
+    "deadline_display": "23 Apr 2026",
+    "dates": "20–24 Sep 2026",
+    "funded": false,
+    "link": "https://2026.iaiss.cc/registration/"
+  },
+  {
+    "id": 3,
+    "name": "Summer School on Machine Learning & AI for Economists",
+    "location": "Barcelona, Spain",
+    "deadline": "2026-03-20",
+    "deadline_display": "20 Mar 2026",
+    "dates": "6–10 Jul 2026",
+    "funded": true,
+    "link": "https://www.ub.edu/school-economics/summer-school-2026-1/"
+  },
+  {
+    "id": 4,
+    "name": "Oxford Machine Learning Summer School (OxML)",
+    "location": "Oxford & London, UK",
+    "deadline": "2026-05-22",
+    "deadline_display": "22 May 2026",
+    "dates": "10–13 Jul 2026",
+    "funded": true,
+    "link": "https://www.oxfordml.school/"
+  },
+  {
+    "id": 5,
+    "name": "Artificial Intelligence and Games Summer School",
+    "location": "Malmö, Sweden",
+    "deadline": "2026-03-01",
+    "deadline_display": "1 Mar 2026",
+    "dates": "15–19 Jun 2026",
+    "funded": false,
+    "link": "https://school.gameaibook.org/"
+  },
+  {
+    "id": 6,
+    "name": "Probabilistic AI School (ProbAI)",
+    "location": "Vilnius, Lithuania",
+    "deadline": "9999-12-31",
+    "deadline_display": "TBD",
+    "dates": "3–7 Aug 2026",
+    "funded": null,
+    "link": "https://probai.school/"
+  },
+  {
+    "id": 7,
+    "name": "International Computer Vision Summer School (ICVSS)",
+    "location": "Sicily, Italy",
+    "deadline": "2026-04-01",
+    "deadline_display": "1 Apr 2026",
+    "dates": "5–11 Jul 2026",
+    "funded": true,
+    "link": "https://icvss.dmi.unict.it/icvss2026/PreviousEditions"
+  },
+  {
+    "id": 8,
+    "name": "Data Science Africa (DSA) Summer School",
+    "location": "Kampala, Uganda",
+    "deadline": "2026-03-15",
+    "deadline_display": "15 Mar 2026",
+    "dates": "20–24 Jul 2026",
+    "funded": true,
+    "link": "https://datascienceafrica.org/dsa-summer-schools/summer-school-2026"
+  },
+  {
+    "id": 9,
+    "name": "Eastern European Machine Learning Summer School (EEML)",
+    "location": "Cetinje, Montenegro",
+    "deadline": "2026-03-31",
+    "deadline_display": "31 Mar 2026",
+    "dates": "27 Jul–1 Aug 2026",
+    "funded": true,
+    "link": "https://www.eeml.eu/"
+  },
+  {
+    "id": 10,
+    "name": "Deep Learning Indaba",
+    "location": "Nigeria",
+    "deadline": "9999-12-31",
+    "deadline_display": "TBD",
+    "dates": "TBD",
+    "funded": true,
+    "link": "https://deeplearningindaba.com/2026/"
+  },
+  {
+    "id": 11,
+    "name": "Gatsby Bridging Programme (Mathematics Summer School)",
+    "location": "London, UK",
+    "deadline": "2026-02-16",
+    "deadline_display": "16 Feb 2026",
+    "dates": "22 Jun–7 Aug 2026",
+    "funded": true,
+    "link": "https://www.ucl.ac.uk/life-sciences/gatsby/study-and-work/gatsby-bridging-programme"
+  },
+  {
+    "id": 12,
+    "name": "DeepLearn 2026",
+    "location": "Orléans, France",
+    "deadline": "2026-03-29",
+    "deadline_display": "29 Mar 2026",
+    "dates": "20–24 Jul 2026",
+    "funded": false,
+    "link": "https://deeplearn.irdta.eu/2026/"
+  },
+  {
+    "id": 13,
+    "name": "Diverse Intelligences Summer Institute (DISI)",
+    "location": "New York, USA",
+    "deadline": "2026-03-16",
+    "deadline_display": "From 16 Mar 2026 (rolling)",
+    "dates": "21 Jun–11 Jul 2026",
+    "funded": true,
+    "link": "https://disi.org/apply/"
+  },
+  {
+    "id": 14,
+    "name": "Aalto University Summer School – Introduction to AI & ML",
+    "location": "Helsinki/Espoo, Finland",
+    "deadline": "2026-03-03",
+    "deadline_display": "From 3 Mar 2026",
+    "dates": "20–31 Jul 2026",
+    "funded": false,
+    "link": "https://www.summerschoolsineurope.eu/course/introduction-to-ai-and-machine-learning/"
+  },
+  {
+    "id": 15,
+    "name": "Munich AI & ML Summer School (MDA-MISU)",
+    "location": "Munich, Germany",
+    "deadline": "2026-03-01",
+    "deadline_display": "1 Mar 2026",
+    "dates": "27 Jul–13 Aug 2026",
+    "funded": null,
+    "link": "https://www.mda-misu.de/en/content/mda_program"
+  },
+  {
+    "id": 16,
+    "name": "Una Europa Summer School – AI & Creativity",
+    "location": "Dublin, Ireland",
+    "deadline": "2026-03-13",
+    "deadline_display": "13 Mar 2026",
+    "dates": "Summer 2026",
+    "funded": true,
+    "link": "https://www.una-europa.eu/calendar/una-europa-summer-school-2026-artificial-intelligence-and-creativity"
+  },
+  {
+    "id": 17,
+    "name": "ELLIS Summer School on ML for Healthcare and Biology",
+    "location": "Manchester, UK",
+    "deadline": "2026-05-30",
+    "deadline_display": "30 May 2026",
+    "dates": "7–9 Jul 2026",
+    "funded": true,
+    "link": "https://www.ellismcr.org/ss2026"
+  },
+  {
+    "id": 18,
+    "name": "The AI and Economics Summer Institute (AIE)",
+    "location": "Chicago, USA",
+    "deadline": "2026-04-01",
+    "deadline_display": "1 Apr 2026",
+    "dates": "6–11 Aug 2026",
+    "funded": true,
+    "link": "https://www.chicagobooth.edu/research/center-for-applied-artificial-intelligence/opportunities/event---aiesi"
+  },
+  {
+    "id": 19,
+    "name": "CCAIM Machine Learning for Healthcare Summer School",
+    "location": "Online",
+    "deadline": "9999-12-31",
+    "deadline_display": "TBD",
+    "dates": "7–11 Sep 2026",
+    "funded": null,
+    "link": "https://www.vanderschaar-lab.com/ml-healthcare-summer-school-2026/"
+  },
+  {
+    "id": 20,
+    "name": "Machine Learning Summer School (MLSS) NYC – Columbia University",
+    "location": "New York, USA",
+    "deadline": "2026-03-22",
+    "deadline_display": "22 Mar 2026",
+    "dates": "Jun 2026",
+    "funded": null,
+    "link": "https://cfe.columbia.edu/content/mlss2",
+    "notes": "Registration fee $800; limited financial aid available"
+  },
+  {
+    "id": 21,
+    "name": "Princeton Machine Learning Theory Summer School",
+    "location": "Princeton, USA",
+    "deadline": "2026-03-31",
+    "deadline_display": "31 Mar 2026",
+    "dates": "3–14 Aug 2026",
+    "funded": null,
+    "link": "https://mlschool.princeton.edu/apply",
+    "notes": "For PhD students interested in ML theory; requires CV, letter of recommendation, statement of purpose"
+  },
+  {
+    "id": 22,
+    "name": "Cambridge ELLIS Unit Summer School on Probabilistic Machine Learning",
+    "location": "Cambridge, UK",
+    "deadline": "9999-12-31",
+    "deadline_display": "TBD",
+    "dates": "13–17 Jul 2026",
+    "funded": null,
+    "link": "https://www.ellis.eng.cam.ac.uk/summer-school/"
+  },
+  {
+    "id": 23,
+    "name": "MLSS on Reliability & Safety (MLSS^R&S)",
+    "location": "Poland",
+    "deadline": "9999-12-31",
+    "deadline_display": "TBD",
+    "dates": "2026",
+    "funded": null,
+    "link": "https://mlss2026.mlinpl.org/"
+  },
+  {
+    "id": 24,
+    "name": "Machine Learning Summer School (MLSS) Melbourne",
+    "location": "Melbourne, Australia",
+    "deadline": "9999-12-31",
+    "deadline_display": "TBD",
+    "dates": "2026",
+    "funded": null,
+    "link": "https://www.mlss-melbourne.com/"
+  },
+  {
+    "id": 25,
+    "name": "Spatial AI & Convergence Science Summer School",
+    "location": "Urbana-Champaign, Illinois, USA",
+    "deadline": "9999-12-31",
+    "deadline_display": "TBD",
+    "dates": "13–17 Jul 2026",
+    "funded": true,
+    "link": "https://i-guide.io/summer-school/summer-school-2026/"
+  }
+]
