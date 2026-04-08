@@ -1,0 +1,64 @@
+name: Update Opportunities
+
+on:
+  schedule:
+    # Every Monday at 08:00 UTC
+    - cron: "0 8 * * 1"
+  workflow_dispatch:   # allow manual trigger from GitHub UI
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: |
+          pip install anthropic google-api-python-client google-auth-httplib2 \
+                      google-auth-oauthlib requests python-dateutil
+
+      - name: Run scraper
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          GMAIL_TOKEN_JSON: ${{ secrets.GMAIL_TOKEN_JSON }}
+          TAVILY_API_KEY: ${{ secrets.TAVILY_API_KEY }}
+        run: python scripts/scrape_and_parse.py
+
+      - name: Check for changes
+        id: diff
+        run: |
+          git diff --quiet data/ || echo "changed=true" >> $GITHUB_OUTPUT
+
+      - name: Create Pull Request
+        if: steps.diff.outputs.changed == 'true'
+        uses: peter-evans/create-pull-request@v6
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          commit-message: "chore: auto-update opportunities [$(date +%Y-%m-%d)]"
+          branch: "update/opportunities-${{ github.run_id }}"
+          title: "New ML/AI opportunities found – ${{ github.run_id }}"
+          body: |
+            ## Automated update
+
+            New scholarship and/or summer school entries were found and added to `data/`.
+
+            **Please review each new entry before merging:**
+            - Confirm the deadline, link, and institution details are correct
+            - Remove any entries that are not relevant or are duplicates
+
+            Sources searched:
+            - Web: phdscanner.com, academicpositions.com, findaphd.com, jobs.ac.uk
+            - Gmail: women-in-machine-learning@googlegroups.com, ml-news@googlegroups.com
+          labels: "automated,needs-review"
+          draft: false
